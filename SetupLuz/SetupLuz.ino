@@ -15,11 +15,11 @@
 
 
 //WIFI
-const char* SSID = "Helena 2.4Ghz";   //"Helena-2G";    //variable que almacena el nombre de la red wifi a la que el nodemcu se va a conectar
-const char* password = "cenoura04";     //"DaniyFercenoura04";  //variable que almacena la seña de la red wifi donde el nodemcu se va a conectar
+const char* SSID = "*********";   //    //variable que almacena el nombre de la red wifi a la que el nodemcu se va a conectar
+const char* password = "*********";     //variable que almacena la seña de la red wifi donde el nodemcu se va a conectar
 
 // MQTT
-const char* BROKER_MQTT = "broker.hivemq.com";  //"iot.eclipse.com"; //"mqtt.fluux.io"; //"test.mosca.io"; //"broker.mqttdashboard.com"; //"test.mosquitto.org"; //"ioticos.org"; //URL do broker MQTT que se deseja utilizar
+const char* BROKER_MQTT = "test.mosquitto.org"; //"broker.hivemq.com";  //"iot.eclipse.com"; //"mqtt.fluux.io"; //"test.mosca.io"; //"broker.mqttdashboard.com"; //"ioticos.org"; //URL do broker MQTT que se deseja utilizar
 const char* broker_username = NULL;
 const char* broker_password = NULL;                  //username and password when credentials are requiredint BROKER_PORT = 1883; // Port of the Broker MQTT
 #define ID_MQTT  "MQTTtest1965"     //id mqtt (session identification)
