@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/04/25 17:26:02.000.357,C:\fernando\projdelphi\provas rad studio 11\MQTT Broker test\HeaderFooterTemplate.pas=</Transaction>
+    <Transaction>2024/04/25 17:26:52.000.443,=C:\fernando\projdelphi\provas rad studio 11\MQTT Broker test\HeaderFooterTemplate.pas</Transaction>
+    <Transaction>2024/09/21 21:04:08.000.327,C:\fernando\projdelphi\provas rad studio 11\IoTBsAs\IoTBsAs.dproj=C:\fernando\projdelphi\provas rad studio 11\MQTT Broker test\HeaderFooterApplication.dproj</Transaction>
+    <Transaction>2024/09/21 21:04:42.000.037,C:\fernando\projdelphi\provas rad studio 11\IoTBsAs\HeaderFooterTemplate.fmx=C:\fernando\projdelphi\provas rad studio 11\MQTT Broker test\HeaderFooterTemplate.fmx</Transaction>
+    <Transaction>2024/09/21 21:04:42.000.037,C:\fernando\projdelphi\provas rad studio 11\IoTBsAs\HeaderFooterTemplate.pas=C:\fernando\projdelphi\provas rad studio 11\MQTT Broker test\HeaderFooterTemplate.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="" Android=""/>
+	</ActiveMobileDevice>
+</BorlandProject>

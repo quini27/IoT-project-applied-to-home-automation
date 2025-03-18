@@ -1,0 +1,101 @@
+inherited MainForm_NmXhdpiPh: TMainForm_NmXhdpiPh
+  ClientHeight = 616
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited PanelBroker: TPanel
+    Size.Width = 400.000000000000000000
+    inherited Circle1: TCircle
+      Position.X = 339.000000000000000000
+    end
+    inherited Label1: TLabel
+      Position.X = 308.000000000000000000
+    end
+    inherited led: TCircle
+      Position.X = 344.000000000000000000
+    end
+  end
+  inherited Header: TToolBar
+    Size.Width = 400.000000000000000000
+    inherited HeaderLabel: TLabel
+      StyledSettings = [Size]
+      Size.Width = 400.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 568.000000000000000000
+    Size.Width = 400.000000000000000000
+    inherited ConnectBtn: TSpeedButton
+      Size.Height = 48.000000000000000000
+    end
+    inherited DisconnectBtn: TSpeedButton
+      Position.X = 208.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+  end
+  inherited MemoLog: TMemo
+    Locked = True
+    Position.Y = 392.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 176.000000000000000000
+    Viewport.Width = 400.000000000000000000
+    Viewport.Height = 176.000000000000000000
+  end
+  inherited PanelTemp: TPanel
+    Position.Y = 296.000000000000000000
+    Size.Width = 400.000000000000000000
+    inherited EditTemp: TEdit
+      Size.Height = 48.000000000000000000
+    end
+    inherited RefTempBut: TSpeedButton
+      ImageIndex = 0
+      Position.X = 352.000000000000000000
+    end
+  end
+  inherited PanelHum: TPanel
+    Padding.Bottom = 10.000000000000000000
+    Position.Y = 344.000000000000000000
+    Size.Width = 400.000000000000000000
+    inherited HumLabel: TLabel
+      Size.Height = 38.000000000000000000
+    end
+    inherited EditHum: TEdit
+      Size.Height = 38.000000000000000000
+    end
+    inherited LabH: TLabel
+      Size.Height = 38.000000000000000000
+    end
+    inherited HumRefBut: TSpeedButton
+      Padding.Bottom = 12.000000000000000000
+      Position.X = 352.000000000000000000
+      Size.Height = 38.000000000000000000
+    end
+  end
+  inherited PanelLamp: TPanel
+    Size.Width = 400.000000000000000000
+    Size.Height = 99.000000000000000000
+    inherited LabelToggle: TLabel
+      Position.Y = 76.000000000000000000
+      Size.Width = 400.000000000000000000
+    end
+    inherited RefLightBut: TSpeedButton
+      Position.X = 328.000000000000000000
+      Position.Y = 56.000000000000000000
+    end
+    inherited ImageViewer1: TImageViewer
+      BitmapScale = 0.799999892711639400
+      Viewport.Width = 208.000000000000000000
+      Viewport.Height = 156.000000000000000000
+    end
+    inherited LedRelay: TCircle
+      Fill.Kind = Resource
+      Position.X = 344.000000000000000000
+      Position.Y = 106.000000000000000000
+    end
+  end
+  inherited TMSMQTTClient1: TTMSMQTTClient
+    BrokerHostName = ''
+    Left = 336
+    Top = 184
+  end
+end

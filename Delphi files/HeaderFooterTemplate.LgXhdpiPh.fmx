@@ -1,0 +1,71 @@
+inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
+  ClientHeight = 696
+  ClientWidth = 448
+  DesignerMasterStyle = 3
+  inherited PanelBroker: TPanel
+    Size.Width = 448.000000000000000000
+  end
+  inherited Header: TToolBar
+    Size.Width = 448.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 448.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 648.000000000000000000
+    Size.Width = 448.000000000000000000
+    inherited ConnectBtn: TSpeedButton
+      Size.Width = 200.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+    inherited DisconnectBtn: TSpeedButton
+      Position.X = 248.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+  end
+  inherited MemoLog: TMemo
+    Position.Y = 192.000000000000000000
+    Size.Width = 448.000000000000000000
+    Size.Height = 456.000000000000000000
+    Viewport.Width = 448.000000000000000000
+    Viewport.Height = 456.000000000000000000
+  end
+  inherited PanelTemp: TPanel
+    Position.Y = 152.000000000000000000
+    Size.Width = 448.000000000000000000
+    inherited EditTemp: TEdit
+      Size.Height = 40.000000000000000000
+    end
+    inherited RefTempBut: TSpeedButton
+      ImageIndex = 0
+      Margins.Bottom = 50.000000000000000000
+      Position.X = 400.000000000000000000
+      Size.Height = 0.000000000000000000
+    end
+  end
+  inherited PanelHum: TPanel
+    Position.Y = 112.000000000000000000
+    Size.Width = 448.000000000000000000
+    inherited EditHum: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited HumRefBut: TSpeedButton
+      Margins.Bottom = 12.000000000000000000
+      Position.X = 400.000000000000000000
+      Size.Height = 18.000000000000000000
+    end
+  end
+  inherited PanelLamp: TPanel
+    Size.Width = 448.000000000000000000
+    Size.Height = 0.000000000000000000
+    inherited LabelToggle: TLabel
+      Position.Y = -23.000000000000000000
+      Size.Width = 448.000000000000000000
+    end
+    inherited ImageViewer1: TImageViewer
+      Viewport.Width = 50.000000000000000000
+      Viewport.Height = 50.000000000000000000
+    end
+  end
+end

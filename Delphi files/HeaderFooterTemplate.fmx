@@ -1,0 +1,335 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 580
+  ClientWidth = 384
+  FormFactor.Width = 1920
+  FormFactor.Height = 1022
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object PanelBroker: TPanel
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 89.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    object brokerLbl: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      Text = 'Broker:'
+      TabOrder = 5
+    end
+    object BrokerList: TComboBox
+      Items.Strings = (
+        'test.mosquitto.org'
+        'broker.hivemq.com'
+        'iot.eclipse.com'
+        'mqtt.fluux.io'
+        'test.mosca.io'
+        'broker.mqttdashboard.com'
+        'broker.emqx.io')
+      ItemIndex = 1
+      ItemWidth = 10.000000000000000000
+      Position.X = 65.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 231.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      OnChange = BrokerListChange
+    end
+    object Circle1: TCircle
+      Fill.Color = claDarkgray
+      Position.X = 312.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claDarkgray
+      Stroke.Thickness = 0.000000000000000000
+    end
+    object Label1: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 285.000000000000000000
+      Position.Y = 69.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'Connection Status'
+      TabOrder = 2
+    end
+    object led: TCircle
+      Fill.Color = claMaroon
+      Position.X = 317.000000000000000000
+      Position.Y = 29.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object portLbl: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      TextSettings.Font.Size = 14.000000000000000000
+      Text = 'Port: 1883'
+      TabOrder = 6
+    end
+  end
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      StyledSettings = [Size, Style]
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.Family = 'Verdana'
+      TextSettings.FontColor = claRed
+      TextSettings.HorzAlign = Center
+      Text = 'Buenos Aires IoT project'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 532.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object ConnectBtn: TSpeedButton
+      StaysPressed = True
+      Align = MostLeft
+      GroupName = 'grpconnection'
+      StyledSettings = [Family, Size, Style]
+      Padding.Left = 6.000000000000000000
+      Padding.Right = 6.000000000000000000
+      Padding.Bottom = 6.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 192.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonleft'
+      Text = 'Connect'
+      TextSettings.FontColorForState.Pressed = claSlateblue
+      OnClick = ConnectBtnClick
+    end
+    object DisconnectBtn: TSpeedButton
+      StaysPressed = True
+      Align = MostRight
+      Enabled = False
+      GroupName = 'grpconnection'
+      StyledSettings = [Family, Size, Style]
+      Padding.Left = 6.000000000000000000
+      Padding.Top = 6.000000000000000000
+      Padding.Right = 6.000000000000000000
+      Padding.Bottom = 6.000000000000000000
+      Position.X = 192.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 192.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonright'
+      Text = 'Disconnect'
+      TextSettings.FontColorForState.Pressed = claSlateblue
+      OnClick = DisconnectBtnClick
+    end
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      '')
+    ReadOnly = True
+    StyledSettings = [Family, Style]
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claLightseagreen
+    TextSettings.WordWrap = True
+    OnChange = MemoLogChange
+    Align = Bottom
+    Position.Y = 416.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 116.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Viewport.Width = 376.000000000000000000
+    Viewport.Height = 108.000000000000000000
+  end
+  object PanelTemp: TPanel
+    Align = Bottom
+    Padding.Left = 20.000000000000000000
+    Position.Y = 320.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object TempLabel: TLabel
+      Align = Left
+      Position.X = 20.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Temperature: '
+      TabOrder = 0
+    end
+    object EditTemp: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Left
+      TabOrder = 1
+      ReadOnly = True
+      TextSettings.HorzAlign = Trailing
+      Position.X = 150.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object LabelC: TLabel
+      Align = Left
+      Margins.Left = 20.000000000000000000
+      Position.X = 250.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = #186'C'
+      TabOrder = 2
+    end
+    object RefTempBut: TSpeedButton
+      Align = MostRight
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 336.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'refreshtoolbutton'
+      TouchTargetExpansion.Bottom = 0.000000000000000000
+      OnClick = RefTempButClick
+    end
+  end
+  object PanelHum: TPanel
+    Align = Bottom
+    Padding.Left = 20.000000000000000000
+    Position.Y = 368.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    object HumLabel: TLabel
+      Align = Left
+      Position.X = 20.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Humidity: '
+      TabOrder = 0
+    end
+    object EditHum: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Left
+      TabOrder = 1
+      ReadOnly = True
+      TextSettings.HorzAlign = Trailing
+      Position.X = 150.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object LabH: TLabel
+      Align = Left
+      Margins.Left = 20.000000000000000000
+      Position.X = 250.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = '%'
+      TabOrder = 2
+    end
+    object HumRefBut: TSpeedButton
+      Align = MostRight
+      Position.X = 336.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'HumRefBut'
+      OnClick = HumRefButClick
+    end
+  end
+  object PanelLamp: TPanel
+    Align = Client
+    Margins.Top = 30.000000000000000000
+    Margins.Bottom = 30.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 123.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    object LabelToggle: TLabel
+      Align = Bottom
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 100.000000000000000000
+      Size.Width = 384.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'touch on the picture to toggle the light state'
+      TabOrder = 0
+    end
+    object RefLightBut: TSpeedButton
+      Anchors = [akTop, akRight]
+      Position.X = 330.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'RefLightBut'
+      OnClick = RefLightButClick
+    end
+    object ImageViewer1: TImageViewer
+      Align = Center
+      Margins.Bottom = 40.000000000000000000
+      Size.Width = 208.000000000000000000
+      Size.Height = 156.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      OnClick = ImageViewer1Click
+      Viewport.Width = 208.000000000000000000
+      Viewport.Height = 156.000000000000000000
+    end
+    object LedRelay: TCircle
+      Anchors = [akTop, akRight]
+      Fill.Color = claMaroon
+      Position.X = 346.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 15.000000000000000000
+      Size.Height = 15.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object TMSMQTTClient1: TTMSMQTTClient
+    BrokerHostName = 'broker.hivemq.com'
+    KeepAliveSettings.AutoReconnect = True
+    Version = '2.0.8.0'
+    OnConnectedStatusChanged = TMSMQTTClient1ConnectedStatusChanged
+    OnPublishReceived = TMSMQTTClient1PublishReceived
+    Left = 328
+    Top = 264
+  end
+end

@@ -1,0 +1,68 @@
+inherited MainForm_Surface: TMainForm_Surface
+  ClientHeight = 1920
+  ClientWidth = 1080
+  DesignerMasterStyle = 3
+  inherited PanelBroker: TPanel
+    Size.Width = 1080.000000000000000000
+  end
+  inherited Header: TToolBar
+    Size.Width = 1080.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 1080.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 1872.000000000000000000
+    Size.Width = 1080.000000000000000000
+    inherited ConnectBtn: TSpeedButton
+      Size.Height = 48.000000000000000000
+    end
+    inherited DisconnectBtn: TSpeedButton
+      Position.X = 905.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+  end
+  inherited MemoLog: TMemo
+    Position.Y = 1820.000000000000000000
+    Size.Width = 1080.000000000000000000
+    Viewport.Width = 1080.000000000000000000
+    Viewport.Height = 52.000000000000000000
+  end
+  inherited PanelTemp: TPanel
+    Position.Y = 1740.000000000000000000
+    Size.Width = 1080.000000000000000000
+    inherited EditTemp: TEdit
+      Size.Height = 40.000000000000000000
+    end
+    inherited RefTempBut: TSpeedButton
+      ImageIndex = 0
+      Margins.Bottom = 50.000000000000000000
+      Position.X = 1032.000000000000000000
+      Size.Height = 0.000000000000000000
+    end
+  end
+  inherited PanelHum: TPanel
+    Position.Y = 1780.000000000000000000
+    Size.Width = 1080.000000000000000000
+    inherited EditHum: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited HumRefBut: TSpeedButton
+      Margins.Bottom = 12.000000000000000000
+      Position.X = 1032.000000000000000000
+      Size.Height = 18.000000000000000000
+    end
+  end
+  inherited PanelLamp: TPanel
+    Size.Width = 1080.000000000000000000
+    Size.Height = 1603.000000000000000000
+    inherited LabelToggle: TLabel
+      Position.Y = 1580.000000000000000000
+      Size.Width = 1080.000000000000000000
+    end
+    inherited ImageViewer1: TImageViewer
+      Viewport.Width = 50.000000000000000000
+      Viewport.Height = 50.000000000000000000
+    end
+  end
+end
